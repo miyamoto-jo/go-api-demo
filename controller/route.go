@@ -14,15 +14,15 @@ func CreateEndPoints() *mux.Router {
 	return r
 }
 
+const (
+	URIHealthCheck = `/healthcheck`
+)
+
 // ハンドラとメソッドをまとめた構造体
 type resource struct {
 	f      func(w http.ResponseWriter, r *http.Request)
 	method string
 }
-
-const (
-	URIHealthCheck = `/healthcheck`
-)
 
 func LoadServices() *map[string]*resource {
 	services := make(map[string]*resource)

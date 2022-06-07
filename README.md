@@ -2,6 +2,8 @@
 api server made in golang
 
 # Try
+下記いずれかのパターンを行えば、ブラウザで `localhost:8080/healthcheck` で動作確認できます。
+
 ## pattern 1
 * go build main.go
 * go run ./main
@@ -12,3 +14,4 @@ api server made in golang
 * Launch すると `.vscode/launch.json` の内容に則って実行されます。
 
 ## pattern 3
+* ルートで `make serve` コマンドを実行
