@@ -1,0 +1,10 @@
+version: '2'
+services:
+  go-api-demo:
+    image: go-api-demo
+    container_name: go-api-demo
+    build:
+      context: ../
+      dockerfile: ./build/Dockerfile
+    ports:
+      - "127.0.0.1:8080:8080"
